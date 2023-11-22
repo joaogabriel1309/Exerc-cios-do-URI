@@ -29,18 +29,16 @@
  após somar dois números no modo “Mofiz”.
 
  */
-
-import java.io.IOException;
 import java.util.Scanner;
 
 public class Exercicio1026 {
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) {
         Scanner scr = new Scanner(System.in);
         while (scr.hasNext()) {
             long value1 = scr.nextLong();
             long value2 = scr.nextLong();
             long sum = value1 ^ value2;
-            System.out.println(value1 ^ value2);
+            System.out.println(sum);
         }
     }
 }
