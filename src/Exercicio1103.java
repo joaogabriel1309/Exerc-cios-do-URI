@@ -27,35 +27,44 @@ public class Exercicio1103 {
     public static void main(String[] args) {
         Scanner scr = new Scanner(System.in);
         while (scr.hasNext()) {
-            int minutes = 0;
+            long Result = 0;
 
-            int StartTime = scr.nextInt();
+            int StartHours = scr.nextInt();
             int StartMinute = scr.nextInt();
-            int FinalTime = scr.nextInt();
+            int FinalHours = scr.nextInt();
             int FinalMinute = scr.nextInt();
 
-            if (!(StartTime == 0) ||
-                    !(StartMinute == 0) ||
-                    !(FinalTime == 0) ||
-                    !(FinalMinute == 0)) {
-
-                if (StartTime == FinalTime) {
-                    minutes = 1380;
-                } else {
-                    int TimeHours = Math.abs(StartTime - FinalTime);
-                    if ((TimeHours >= 0) && (TimeHours < 23)) {
-                        while (!(TimeHours == 0)) {
-                            minutes = minutes + 60;
-                            TimeHours--;
+            if (!(StartHours == 0) ||
+                !(StartMinute == 0) ||
+                !(FinalHours == 0) ||
+                !(FinalMinute == 0)){
+                if ((FinalMinute > StartMinute) && (StartHours == FinalHours)) {
+                    Result = FinalMinute - StartMinute;
+                }else{
+                    if ((StartMinute > FinalMinute) && (StartHours == FinalHours)){
+                        Result = 1440 - (StartMinute - FinalMinute);
+                    }else{
+                        if (StartHours > FinalHours){
+                            Result = (long) (StartHours - FinalHours) * 60;
+                            Result = 1440 - Result;
+                            if (StartMinute > FinalMinute){
+                                Result = Result - (StartMinute - FinalMinute);
+                            }else{
+                                Result = Result + (FinalMinute - StartMinute);
+                            }
+                        }else{
+                            Result = (long) (FinalHours - StartHours) * 60;
+                            if (StartMinute > FinalMinute){
+                                Result = Result - (StartMinute - FinalMinute);
+                            }else{
+                                Result = Result + (FinalMinute - StartMinute);
+                            }
                         }
                     }
                 }
-                if (StartMinute != FinalMinute) {
-                    minutes = minutes + Math.abs(StartMinute - 60);
-                    minutes = minutes + FinalMinute;
-                }
-                System.out.println(minutes);
+
             }
+            System.out.println(Result);
         }
     }
 }
