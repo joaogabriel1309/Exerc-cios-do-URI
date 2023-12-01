@@ -8,7 +8,7 @@ public class exercicio1047 {
         int FinalHours = scr.nextInt();
         int FinalMinute = scr.nextInt();
 
-        double result = 0;
+        double result;
 
         if ((FinalMinute > StartMinute) && (StartHours == FinalHours)) {
             result = FinalMinute - StartMinute;
