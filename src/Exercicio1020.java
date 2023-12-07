@@ -17,7 +17,7 @@ public class Exercicio1020 {
             System.out.printf("%d ano(s)\n", Year);
         }
         else{
-            System.out.printf("0 ano(s)\n");
+            System.out.print("0 ano(s)\n");
         }
 
         if (Age >= 30){
@@ -26,7 +26,7 @@ public class Exercicio1020 {
             System.out.printf("%d mes(es)\n", Month);
         }
         else{
-            System.out.printf("0 mes(es)\n");
+            System.out.print("0 mes(es)\n");
         }
 
         System.out.printf("%d dia(s)\n", Age);
