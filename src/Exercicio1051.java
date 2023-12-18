@@ -6,7 +6,7 @@ public class Exercicio1051 {
         Scanner sc = new Scanner(System.in);
         double salario = sc.nextDouble();
         if (salario > 0 && salario <= 2000) {
-            System.out.printf("Isento\n");
+            System.out.print("Isento\n");
         } else if (salario <= 3000) {
             salario = salario - 2000;
             System.out.printf("R$ %.2f\n", (salario / 100) * 8);
