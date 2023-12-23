@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class exercicio1047 {
+public class Exercicio1047 {
     public static void main(String[] args) {
         Scanner scr = new Scanner(System.in);
         int StartHours = scr.nextInt();
